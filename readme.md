@@ -7,10 +7,10 @@ rendered data to densely detect human facial geometry in real-world images.
 
 Using training data similar to this:
 
-![Screenshot](http://mikoro.github.io/images/master-thesis/training-data.jpg "Training data")
+![Screenshot](https://mikoro.github.io/images/master-thesis/training-data.jpg "Training data")
 
 Results like these were obtained:
 
-![Screenshot](http://mikoro.github.io/images/master-thesis/results.jpg "Results")
+![Screenshot](https://mikoro.github.io/images/master-thesis/results.jpg "Results")
 
 Video of the results is available on YouTube: [UV-net test video](https://youtu.be/iEvVTav9PN0)
