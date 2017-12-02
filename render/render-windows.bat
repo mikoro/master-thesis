@@ -1,0 +1,1 @@
+blender --background --enable-autoexec --threads 0 head.blend --python-text run.py 1> nul

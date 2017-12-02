@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UV-net results</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+
+        html, body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 4px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #header {
+            margin-bottom: 40px;
+        }
+
+        #params_str {
+            display: none;
+        }
+
+        #all_charts {
+            width: 1700px;
+            margin: auto;
+        }
+
+        .chart_area {
+            width: 800px;
+            height: 600px;
+        }
+
+        .chart_area input {
+            width: 100%;
+        }
+
+        .result_area {
+            margin: auto auto 40px;
+        }
+
+        .result_area input {
+            width: 100%;
+        }
+
+        .result_text {
+            font-size: 14px;
+            margin: 0 0 0 9px;
+        }
+
+        .float_left {
+            float: left;
+        }
+
+        .float_right {
+            float: right;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+
+<div id="header">
+    <h1>UV-net results</h1>
+    <table>
+        <tr>
+            <th>Run ID</th>
+            <th>Parameters</th>
+            <th>Epochs</th>
+            <th>Duration</th>
+            <th>Samples seen</th>
+            <th>Samples/s</th>
+            <th>Train loss</th>
+            <th>Test loss</th>
+            <th>Eval metric</th>
+        </tr>
+        <tr>
+            <td>{{ run_id }}</td>
+            <td>{{ param_count }}</td>
+            <td>{{ epoch_count }}</td>
+            <td>{{ elapsed_time }}</td>
+            <td>{{ samples_seen }}</td>
+            <td>{{ samples_per_s }}</td>
+            <td id="train_loss">0</td>
+            <td id="test_loss">0</td>
+            <td id="eval_metric">0</td>
+        </tr>
+        <tr>
+            <th colspan="4">Description</th>
+            <th colspan="5">Git commit name</th>
+        </tr>
+        <tr>
+            <td colspan="4">{{ run_description }}</td>
+            <td colspan="5">{{ git_commit_name }}</td>
+        </tr>
+        <tr>
+            <th colspan="9">Run parameters</th>
+        </tr>
+        <tr>
+            <td colspan="9">
+                <a href="#" id="show_parameters">Show</a>
+                <pre id="params_str">
+{{ params_str }}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="9">Settings</th>
+        </tr>
+        <tr>
+            <td colspan="9">
+                <input name="image_scroll_delay" id="image_scroll_delay" type="checkbox" checked="checked">
+                <label for="image_scroll_delay">Image scroll delay</label>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<hr/>
+
+<div id="all_charts">
+    <div class="chart_area float_left">
+        <h1>Train/test losses</h1>
+        <canvas id="loss_canvas"></canvas>
+        <input id="loss_slider" type="range" value="0" min="0" max="0" step="1" title="Loss slider"/>
+    </div>
+    <div class="chart_area float_right">
+        <h1>Eval metric</h1>
+        <canvas id="metric_canvas"></canvas>
+        <input id="metric_slider" type="range" value="0" min="0" max="0" step="1" title="Metric slider"/>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<hr/>
+
+<h1>Test samples (fixed)</h1>
+<div id="test_fixed_results"></div>
+
+<hr/>
+
+<h1>Test samples (random)</h1>
+<div id="test_random_results"></div>
+
+<hr/>
+
+<h1>Real samples (fixed)</h1>
+<div id="real_fixed_results"></div>
+
+<hr/>
+
+<h1>Real samples (random)</h1>
+<div id="real_random_results"></div>
+
+<script>
+
+    var epoch_count = {{ epoch_count }};
+    var train_losses = {{ train_losses }};
+    var test_losses = {{ test_losses }};
+    var eval_metrics = {{ eval_metrics }};
+    var git_commit_name = "{{ git_commit_name }}";
+    var epoch_list = [];
+    var reloadTimeout;
+    var drawImageTimeout;
+
+    function pad(num, size) {
+        var s = num + "";
+        while (s.length < size) s = "0" + s;
+        return s;
+    }
+
+    if (!String.prototype.format) {
+        String.prototype.format = function () {
+            var args = arguments;
+            return this.replace(/{(\d+)}/g, function (match, number) {
+                return typeof args[number] !== 'undefined'
+                    ? args[number]
+                    : match
+                    ;
+            });
+        };
+    }
+
+    function drawLossChart(index) {
+        var loss_canvas = $("#loss_canvas")[0];
+        var ctx = loss_canvas.getContext("2d");
+
+        var data = {
+            labels: epoch_list.slice(index, epoch_list.length),
+            datasets: [
+                {
+                    label: "Train loss",
+                    data: train_losses.slice(index, train_losses.length),
+                    fill: false,
+                    borderColor: "rgba(0, 0, 255, 1)",
+                    backgroundColor: "rgba(0, 0, 255, 1)",
+                    pointRadius: 0
+                },
+                {
+                    label: "Test loss",
+                    data: test_losses.slice(index, test_losses.length),
+                    fill: false,
+                    borderColor: "rgba(255, 0, 0, 1)",
+                    backgroundColor: "rgba(255, 0, 0, 1)",
+                    pointRadius: 0
+                }
+            ]
+        };
+
+        new Chart(ctx, {
+            type: "line",
+            data: data,
+            options: {
+                responsive: true,
+                tooltips: {enabled: false},
+                hover: {mode: null},
+                events: [],
+                animation: {duration: 0},
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: "loss"
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: "epoch"
+                        },
+                        ticks: {
+                            autoSkip: true,
+                            maxTicksLimit: 40
+                        }
+                    }]
+                }
+            }
+        });
+    }
+
+    function drawMetricChart(index) {
+        var metric_canvas = $("#metric_canvas")[0];
+        var ctx = metric_canvas.getContext("2d");
+
+        var data = {
+            labels: epoch_list.slice(index, epoch_list.length),
+            datasets: [
+                {
+                    label: "Eval metric",
+                    data: eval_metrics.slice(index, eval_metrics.length),
+                    fill: false,
+                    borderColor: "rgba(0, 255, 0, 1)",
+                    backgroundColor: "rgba(0, 255, 0, 1)",
+                    pointRadius: 0
+                }
+            ]
+        };
+
+        new Chart(ctx, {
+            type: "line",
+            data: data,
+            options: {
+                responsive: true,
+                tooltips: {enabled: false},
+                hover: {mode: null},
+                events: [],
+                animation: {duration: 0},
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: "metric"
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: "epoch"
+                        },
+                        ticks: {
+                            autoSkip: true,
+                            maxTicksLimit: 40
+                        }
+                    }]
+                }
+            }
+        });
+    }
+
+    function drawResultImage(epoch, canvas_index) {
+        var img = new Image();
+
+        img.onload = function () {
+            var result_canvas = $("#result_canvas{0}".format(canvas_index))[0];
+            var ctx = result_canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+        };
+
+        img.src = "plot/{0}_{1}.png".format(pad(epoch, 5), pad(canvas_index, 2));
+    }
+
+    $(document).ready(function () {
+        for (var i = 1; i <= epoch_count; i++) {
+            epoch_list.push(i);
+        }
+
+        var loss_canvas = $("#loss_canvas")[0];
+
+        var loss_slider = $("#loss_slider");
+        loss_slider.attr("max", epoch_list.length - 2);
+        loss_slider.attr("value", 0);
+        loss_slider.on("input change", function () {
+            drawLossChart(this.value);
+        });
+
+        var metric_slider = $("#metric_slider");
+        metric_slider.attr("max", epoch_list.length - 2);
+        metric_slider.attr("value", 0);
+        metric_slider.on("input change", function () {
+            drawMetricChart(this.value);
+        });
+
+        drawLossChart(0);
+        drawMetricChart(0);
+
+        for (let i = 1; i <= 17; ++i) {
+            var target = "";
+
+            if (i <= 6)
+                target = "#test_fixed_results";
+            else if (i > 6 && i <= 7)
+                target = "#test_random_results";
+            else if (i > 7 && i <= 15)
+                target = "#real_fixed_results";
+            else
+                target = "#real_random_results";
+
+            var result_width = 1540;
+            var result_height = 544;
+
+            if (i > 7) {
+                result_width = 800;
+                result_height = 376;
+            }
+
+            $(("<div class=\"result_area\" style=\"width: {1}px;\">" +
+            "<canvas id=\"result_canvas{0}\" width=\"{1}\" height=\"{2}\"></canvas>" +
+            "<p id=\"result_text{0}\" class=\"result_text\"></p>" +
+            "<input id=\"result_slider{0}\" type=\"range\" value=\"100\" min=\"1\" max=\"100\" step=\"1\" />" +
+            "</div>").format(i, result_width, result_height)).appendTo(target);
+
+            var slider = "#result_slider{0}".format(i);
+            let result_text = $("#result_text{0}".format(i));
+            result_text.text("{0} / {1} / {2}".format(git_commit_name, i, epoch_count));
+
+            $(slider).attr("max", epoch_count);
+            $(slider).attr("value", epoch_count);
+            $(slider).on("input change", function () {
+                clearTimeout(drawImageTimeout);
+
+                let epoch_number = this.value;
+                result_text.text("{0} / {1} / {2}".format(git_commit_name, i, epoch_number));
+
+                if ($("#image_scroll_delay").is(":checked"))
+                    drawImageTimeout = setTimeout(function () { drawResultImage(epoch_number, i); }, 500);
+                else
+                    drawResultImage(epoch_number, i);
+
+            });
+
+            drawResultImage(epoch_count, i);
+        }
+
+        // reloadTimeout = setTimeout(function () { window.location.reload(true); }, 15 * 60000);
+
+        // $(document).on("mousemove", function () {
+        //    clearTimeout(reloadTimeout);
+        //    reloadTimeout = setTimeout(function () { window.location.reload(true); }, 15 * 60000);
+        // });
+
+        $("#params_str").hide();
+        $("#show_parameters").click(function () {
+            $("#params_str").toggle();
+        });
+
+        var tmp = train_losses.slice(-10);
+        var sum = 0.0;
+        for (var i in tmp) {
+            sum += tmp[i];
+        }
+        $("#train_loss").text(Math.round(sum / tmp.length));
+
+        tmp = test_losses.slice(-10);
+        sum = 0.0;
+        for (var i in tmp) {
+            sum += tmp[i];
+        }
+        $("#test_loss").text(Math.round(sum / tmp.length));
+
+        tmp = eval_metrics.slice(-10);
+        sum = 0.0;
+        for (var i in tmp) {
+            sum += tmp[i];
+        }
+        $("#eval_metric").text(Math.round(sum / tmp.length));
+    });
+
+</script>
+</body>
+</html>

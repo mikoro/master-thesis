@@ -1,0 +1,80 @@
+%\phantomsection
+\refstepcounter{dummy}
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{1} % <-- 2 includes up to subsections in the ToC
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+\tableofcontents
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+\clearpage
+
+\begingroup
+    \let\clearpage\relax
+    \let\cleardoublepage\relax
+    \let\cleardoublepage\relax
+    %*******************************************************
+    % List of Figures
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listfigurename}
+    \pdfbookmark[1]{\listfigurename}{lof}
+    \listoffigures
+
+    \vspace{8ex}
+
+    %*******************************************************
+    % List of Tables
+    %*******************************************************
+    %\phantomsection
+    %\refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listtablename}
+    %\pdfbookmark[1]{\listtablename}{lot}
+    %\listoftables
+
+    %\vspace{8ex}
+%   \newpage
+
+    %*******************************************************
+    % List of Listings
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\lstlistlistingname}
+    \pdfbookmark[1]{\lstlistlistingname}{lol}
+    \lstlistoflistings
+
+    \vspace{8ex}
+
+    %*******************************************************
+    % Acronyms
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    \pdfbookmark[1]{Acronyms}{acronyms}
+    \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+    \chapter*{Acronyms}
+    \begin{acronym}[SSHFS]
+        \acro{BRDF}{Bidirectional Reflectance Distribution Function}
+        \acro{CNN}{Convolutional Neural Network}
+        \acro{CNTK}{Microsoft Cognitive Toolkit}
+        \acro{CPU}{Central Processing Unit}
+        \acro{CSC}{Finnish IT Center for Science}
+        \acro{ELU}{Exponential Linear Unit}
+        \acro{FCNN}{Fully Convolutional Neural Network}
+        \acro{GPU}{Graphics Processing Unit}
+        \acro{GUI}{Graphical User Interface}
+        \acro{HDD}{Hard Disk Drive}
+        \acro{HDR}{High Dynamic Range}
+        \acro{HTML}{Hypertext Markup Language}
+        \acro{PCA}{Principal Component Analysis}
+        \acro{RELU}{Rectified Linear Unit}
+        \acro{SGD}{Stochastic Gradient Descent}
+        \acro{SSD}{Solid State Drive}
+        \acro{SSHFS}{Secure Shell Filesystem}
+    \end{acronym}
+    % remember to order alphabetically
+\endgroup

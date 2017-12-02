@@ -1,0 +1,1 @@
+pdftk master-thesis-aalto.pdf master-thesis.pdf cat output master-thesis-combined.pdf

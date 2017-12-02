@@ -1,0 +1,604 @@
+@inproceedings{Blanz1999,
+author = {Blanz, Volker and Vetter, Thomas},
+booktitle = {Proceedings of the 26th annual conference on Computer graphics and interactive techniques},
+doi = {10.1145/311535.311556},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Blanz, Vetter - Unknown - A Morphable Model For The Synthesis Of 3D Faces.pdf:pdf},
+keywords = {computer vision,facial animation,facial modeling,mor-phing,photogrammetry,registration},
+pages = {187--194},
+title = {{A morphable model for the synthesis of 3D faces}},
+year = {1999}
+}
+@inproceedings{block-momentum,
+abstract = {We present a new approach to scalable training of deep learning machines by incremental block training with intra-block parallel optimization to leverage data parallelism and blockwise model-update filtering to stabilize learning process. By using an implementation on a distributed GPU cluster with an MPI-based HPC machine learning framework to coordinate parallel job scheduling and collective communication, we have trained successfully deep bidirectional long short-term memory (LSTM) recurrent neural networks (RNNs) and fully-connected feed-forward deep neural networks (DNNs) for large vocabulary continuous speech recognition on two benchmark tasks, namely 309-hour Switchboard-I task and 1,860-hour “Switchboard+Fisher” task. We achieve almost linear speedup up to 16 GPU cards on LSTM task and 64 GPU cards on DNN task, with either no degradation or improved recognition accuracy in comparison with that of running a traditional mini-batch based stochastic gradient descent training on a single GPU.},
+author = {Chen, Kai and Huo, Qiang},
+booktitle = {2016 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)},
+pages = {5880--5884},
+title = {{Scalable Training of Deep Learning Machines by Incremental Block Training with Intra-block Parallel Optimization and Blockwise Model-Update Filtering}},
+year = {2016}
+}
+@article{Clevert2015,
+abstract = {We introduce the "exponential linear unit" (ELU) which speeds up learning in deep neural networks and leads to higher classification accuracies. Like rectified linear units (ReLUs), leaky ReLUs (LReLUs) and parametrized ReLUs (PReLUs), ELUs alleviate the vanishing gradient problem via the identity for positive values. However, ELUs have improved learning characteristics compared to the units with other activation functions. In contrast to ReLUs, ELUs have negative values which allows them to push mean unit activations closer to zero like batch normalization but with lower computational complexity. Mean shifts toward zero speed up learning by bringing the normal gradient closer to the unit natural gradient because of a reduced bias shift effect. While LReLUs and PReLUs have negative values, too, they do not ensure a noise-robust deactivation state. ELUs saturate to a negative value with smaller inputs and thereby decrease the forward propagated variation and information. Therefore, ELUs code the degree of presence of particular phenomena in the input, while they do not quantitatively model the degree of their absence. In experiments, ELUs lead not only to faster learning, but also to significantly better generalization performance than ReLUs and LReLUs on networks with more than 5 layers. On CIFAR-100 ELUs networks significantly outperform ReLU networks with batch normalization while batch normalization does not improve ELU networks. ELU networks are among the top 10 reported CIFAR-10 results and yield the best published result on CIFAR-100, without resorting to multi-view evaluation or model averaging. On ImageNet, ELU networks considerably speed up learning compared to a ReLU network with the same architecture, obtaining less than 10{\%} classification error for a single crop, single model network.},
+archivePrefix = {arXiv},
+arxivId = {1511.07289},
+author = {Clevert, Djork-Arn{\'{e}} and Unterthiner, Thomas and Hochreiter, Sepp},
+eprint = {1511.07289},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Clevert, Unterthiner, Hochreiter - 2015 - Fast and Accurate Deep Network Learning by Exponential Linear Units (ELUs).pdf:pdf},
+journal = {arXiv},
+title = {{Fast and Accurate Deep Network Learning by Exponential Linear Units (ELUs)}},
+year = {2015}
+}
+@book{Datta2015,
+author = {Datta, Asit Kumar and Datta, Madhura and Banerjee, Pradipta Kumar},
+isbn = {9781482226546},
+publisher = {CRC Press},
+title = {{Face Detection and Recognition: Theory and Practice}},
+year = {2015}
+}
+@article{Glorot2010,
+author = {Glorot, Xavier and Bengio, Yoshua},
+doi = {10.1.1.207.2059},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Glorot, Bengio - Unknown - Understanding the difficulty of training deep feedforward neural networks.pdf:pdf},
+journal = {Proceedings of the 13th International Conference on Artificial Intelligence and Statistics (AISTATS)},
+pages = {249--256},
+title = {{Understanding the difficulty of training deep feedforward neural networks}},
+volume = {9},
+year = {2010}
+}
+@book{Goodfellow2016,
+author = {Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Goodfellow, Bengio, Courville - 2016 - Deep Learning.pdf:pdf},
+publisher = {MIT Press},
+title = {{Deep Learning}},
+url = {http://www.deeplearningbook.org/},
+year = {2016}
+}
+@inproceedings{Guler2016,
+abstract = {In this paper we propose to learn a mapping from image pixels into a dense template grid through a fully convolutional network. We formulate this task as a regression problem and train our network by leveraging upon manually annotated facial landmarks "in-the-wild". We use such landmarks to establish a dense correspondence field between a three-dimensional object template and the input image, which then serves as the ground-truth for training our regression system. We show that we can combine ideas from semantic segmentation with regression networks, yielding a highly-accurate "quantized regression" architecture. Our system, called DenseReg, allows us to estimate dense image-to-template correspondences in a fully convolutional manner. As such our network can provide useful correspondence information as a stand-alone system, while when used as an initialization for Statistical Deformable Models we obtain landmark localization results that largely outperform the current state-of-the-art on the challenging 300W benchmark. We thoroughly evaluate our method on a host of facial analysis tasks and also provide qualitative results for dense human body correspondence. We make our code available at http://alpguler.com/DenseReg.html along with supplementary materials.},
+author = {G{\"{u}}ler, Rıza Alp and Trigeorgis, George and Antonakos, Epameinondas and Snape, Patrick and Zafeiriou, Stefanos and Kokkinos, Iasonas},
+booktitle = {2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+doi = {10.1109/CVPR.2017.280},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/G{\"{u}}ler et al. - 2016 - DenseReg Fully Convolutional Dense Shape Regression In-the-Wild.pdf:pdf},
+pages = {2614--2623},
+title = {{DenseReg: Fully Convolutional Dense Shape Regression In-the-Wild}},
+year = {2017}
+}
+@article{Han2015,
+abstract = {Neural networks are both computationally intensive and memory intensive, making them difficult to deploy on embedded systems with limited hardware resources. To address this limitation, we introduce "deep compression", a three stage pipeline: pruning, trained quantization and Huffman coding, that work together to reduce the storage requirement of neural networks by 35x to 49x without affecting their accuracy. Our method first prunes the network by learning only the important connections. Next, we quantize the weights to enforce weight sharing, finally, we apply Huffman coding. After the first two steps we retrain the network to fine tune the remaining connections and the quantized centroids. Pruning, reduces the number of connections by 9x to 13x; Quantization then reduces the number of bits that represent each connection from 32 to 5. On the ImageNet dataset, our method reduced the storage required by AlexNet by 35x, from 240MB to 6.9MB, without loss of accuracy. Our method reduced the size of VGG-16 by 49x from 552MB to 11.3MB, again with no loss of accuracy. This allows fitting the model into on-chip SRAM cache rather than off-chip DRAM memory. Our compression method also facilitates the use of complex neural networks in mobile applications where application size and download bandwidth are constrained. Benchmarked on CPU, GPU and mobile GPU, compressed network has 3x to 4x layerwise speedup and 3x to 7x better energy efficiency.},
+archivePrefix = {arXiv},
+arxivId = {1510.00149},
+author = {Han, Song and Mao, Huizi and Dally, William J.},
+eprint = {1510.00149},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Han, Mao, Dally - 2015 - Deep Compression Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding.pdf:pdf},
+journal = {International Conference on Learning Representations (ICLR)},
+title = {{Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding}},
+year = {2016}
+}
+@article{He2014,
+abstract = {Rectified activation units (rectifiers) are essential for state-of-the-art neural networks. In this work, we study rectifier neural networks for image classification from two aspects. First, we propose a Parametric Rectified Linear Unit (PReLU) that generalizes the traditional rectified unit. PReLU improves model fitting with nearly zero extra computational cost and little overfitting risk. Second, we derive a robust initialization method that particularly considers the rectifier nonlinearities. This method enables us to train extremely deep rectified models directly from scratch and to investigate deeper or wider network architectures. Based on our PReLU networks (PReLU-nets), we achieve 4.94{\%} top-5 test error on the ImageNet 2012 classification dataset. This is a 26{\%} relative improvement over the ILSVRC 2014 winner (GoogLeNet, 6.66{\%}). To our knowledge, our result is the first to surpass human-level performance (5.1{\%}, Russakovsky et al.) on this visual recognition challenge.},
+archivePrefix = {arXiv},
+arxivId = {1502.01852},
+author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+doi = {10.1109/ICCV.2015.123},
+eprint = {1502.01852},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/He et al. - Unknown - Delving Deep into Rectifiers Surpassing Human-Level Performance on ImageNet Classification.pdf:pdf},
+journal = {Proceedings of the IEEE International Conference on Computer Vision},
+pages = {1026--1034},
+title = {{Delving deep into rectifiers: Surpassing human-level performance on imagenet classification}},
+year = {2015}
+}
+@article{Hjelmas2001,
+abstract = {In this paper we present a comprehensive and critical survey of face detection algorithms. Face detection is a necessary first-step in face recognition systems, with the purpose of localizing and extracting the face region from the background. It also has several applications in areas such as content-based image retrieval, video coding, video conferencing, crowd surveillance, and intelligent human–computer interfaces. However, it was not until recently that the face detection problem received consider-able attention among researchers. The human face is a dynamic object and has a high degree of variability in its apperance, which makes face detection a difficult problem in computer vision. A wide variety of techniques have been proposed, ranging from simple edge-based algorithms to composite high-level approaches utilizing advanced pattern recognition methods. The algorithms presented in this paper are classified as either feature-based or image-based and are discussed in terms of their technical approach and performance. Due to the lack of standardized tests, we do not provide a comprehensive comparative evaluation, but in cases where results are reported on common datasets, comparisons are presented. We also give a presentation of some proposed applications and possible application areas. c},
+archivePrefix = {arXiv},
+arxivId = {arXiv:1011.1669v3},
+author = {Hjelm{\aa}s, Erik and Low, Boon Kee},
+doi = {10.1006/cviu.2001.0921},
+eprint = {arXiv:1011.1669v3},
+journal = {Computer Vision and Image Understanding},
+number = {3},
+pages = {236--274},
+title = {{Face Detection: A Survey}},
+volume = {83},
+year = {2001}
+}
+@article{Huang2017,
+abstract = {Recent work has shown that convolutional networks can be substantially deeper, more accurate, and efficient to train if they contain shorter connections between layers close to the input and those close to the output. In this paper, we embrace this observation and introduce the Dense Convolutional Network (DenseNet), which connects each layer to every other layer in a feed-forward fashion. Whereas traditional convolutional networks with L layers have L connections - one between each layer and its subsequent layer - our network has L(L+1)/2 direct connections. For each layer, the feature-maps of all preceding layers are used as inputs, and its own feature-maps are used as inputs into all subsequent layers. DenseNets have several compelling advantages: they alleviate the vanishing-gradient problem, strengthen feature propagation, encourage feature reuse, and substantially reduce the number of parameters. We evaluate our proposed architecture on four highly competitive object recognition benchmark tasks (CIFAR-10, CIFAR-100, SVHN, and ImageNet). DenseNets obtain significant improvements over the state-of-the-art on most of them, whilst requiring less memory and computation to achieve high performance. Code and models are available at https://github.com/liuzhuang13/DenseNet .},
+author = {Huang, Gao and Liu, Zhuang and Weinberger, Kilian Q and van der Maaten, Laurens},
+doi = {10.1109/CVPR.2017.243},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Huang et al. - Unknown - Densely Connected Convolutional Networks.pdf:pdf},
+journal = {2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+pages = {2261--2269},
+title = {{Densely Connected Convolutional Networks}},
+year = {2017}
+}
+@book{Hughes2013,
+author = {Hughes, John F. and Dam, Andries Van and MCGuire, Morgan and Sklar, David F. and Foley, James D. and Feiner, Steven K. and Akeley, Kurt},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Hughes et al. - 2014 - Computer Graphics Principles and Practice.pdf:pdf},
+isbn = {0321399528},
+publisher = {Addison-Wesley},
+title = {{Computer graphics: principles and practice}},
+year = {2013}
+}
+@inproceedings{Ioffe2015,
+abstract = {Training Deep Neural Networks is complicated by the fact that the distribution of each layer's inputs changes during training, as the parameters of the previous layers change. This slows down the training by requiring lower learning rates and careful parameter initialization, and makes it notoriously hard to train models with saturating nonlinearities. We refer to this phenomenon as internal covariate shift, and address the problem by normalizing layer inputs. Our method draws its strength from making normalization a part of the model architecture and performing the normalization for each training mini-batch. Batch Normalization allows us to use much higher learning rates and be less careful about initialization. It also acts as a regularizer, in some cases eliminating the need for Dropout. Applied to a state-of-the-art image classification model, Batch Normalization achieves the same accuracy with 14 times fewer training steps, and beats the original model by a significant margin. Using an ensemble of batch-normalized networks, we improve upon the best published result on ImageNet classification: reaching 4.9{\%} top-5 validation error (and 4.8{\%} test error), exceeding the accuracy of human raters.},
+archivePrefix = {arXiv},
+arxivId = {1502.03167},
+author = {Ioffe, Sergey and Szegedy, Christian},
+booktitle = {Proceedings of the 32nd International Conference on Machine Learning (ICML-15)},
+eprint = {1502.03167},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Ioffe, Szegedy - 2015 - Batch Normalization Accelerating Deep Network Training by Reducing Internal Covariate Shift.pdf:pdf},
+pages = {448--456},
+title = {{Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift}},
+year = {2015}
+}
+@article{Isola2016,
+abstract = {We investigate conditional adversarial networks as a general-purpose solution to image-to-image translation problems. These networks not only learn the mapping from input image to output image, but also learn a loss function to train this mapping. This makes it possible to apply the same generic approach to problems that traditionally would require very different loss formulations. We demonstrate that this approach is effective at synthesizing photos from label maps, reconstructing objects from edge maps, and colorizing images, among other tasks. As a community, we no longer hand-engineer our mapping functions, and this work suggests we can achieve reasonable results without hand-engineering our loss functions either.},
+archivePrefix = {arXiv},
+arxivId = {1611.07004},
+author = {Isola, Phillip and Zhu, Jun-Yan and Zhou, Tinghui and Efros, Alexei A.},
+eprint = {1611.07004},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Isola et al. - 2016 - Image-to-Image Translation with Conditional Adversarial Networks.pdf:pdf},
+journal = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+title = {{Image-to-Image Translation with Conditional Adversarial Networks}},
+year = {2017}
+}
+@article{Jackson2017,
+abstract = {3D face reconstruction is a fundamental Computer Vision problem of extraordinary difficulty. Current systems often assume the availability of multiple facial images (sometimes from the same subject) as input, and must address a number of methodological challenges such as establishing dense correspondences across large facial poses, expressions, and non-uniform illumination. In general these methods require complex and inefficient pipelines for model building and fitting. In this work, we propose to address many of these limitations by training a Convolutional Neural Network (CNN) on an appropriate dataset consisting of 2D images and 3D facial models or scans. Our CNN works with just a single 2D facial image, does not require accurate alignment nor establishes dense correspondence between images, works for arbitrary facial poses and expressions, and can be used to reconstruct the whole 3D facial geometry (including the non-visible parts of the face) bypassing the construction (during training) and fitting (during testing) of a 3D Morphable Model. We achieve this via a simple CNN architecture that performs direct regression of a volumetric representation of the 3D facial geometry from a single 2D image. We also demonstrate how the related task of facial landmark localization can be incorporated into the proposed framework and help improve reconstruction quality, especially for the cases of large poses and facial expressions. Testing code will be made available online, along with pre-trained models http://aaronsplace.co.uk/papers/jackson2017recon},
+archivePrefix = {arXiv},
+arxivId = {1703.07834},
+author = {Jackson, Aaron S. and Bulat, Adrian and Argyriou, Vasileios and Tzimiropoulos, Georgios},
+eprint = {1703.07834},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Jackson et al. - 2017 - Large Pose 3D Face Reconstruction from a Single Image via Direct Volumetric CNN Regression(2).pdf:pdf},
+journal = {International Conference on Computer Vision},
+title = {{Large Pose 3D Face Reconstruction from a Single Image via Direct Volumetric CNN Regression}},
+year = {2017}
+}
+@article{Jackson2017,
+abstract = {3D face reconstruction is a fundamental Computer Vision problem of extraordinary difficulty. Current systems often assume the availability of multiple facial images (sometimes from the same subject) as input, and must address a number of methodological challenges such as establishing dense correspondences across large facial poses, expressions, and non-uniform illumination. In general these methods require complex and inefficient pipelines for model building and fitting. In this work, we propose to address many of these limitations by training a Convolutional Neural Network (CNN) on an appropriate dataset consisting of 2D images and 3D facial models or scans. Our CNN works with just a single 2D facial image, does not require accurate alignment nor establishes dense correspondence between images, works for arbitrary facial poses and expressions, and can be used to reconstruct the whole 3D facial geometry (including the non-visible parts of the face) bypassing the construction (during training) and fitting (during testing) of a 3D Morphable Model. We achieve this via a simple CNN architecture that performs direct regression of a volumetric representation of the 3D facial geometry from a single 2D image. We also demonstrate how the related task of facial landmark localization can be incorporated into the proposed framework and help improve reconstruction quality, especially for the cases of large poses and facial expressions. Testing code will be made available online, along with pre-trained models http://aaronsplace.co.uk/papers/jackson2017recon},
+archivePrefix = {arXiv},
+arxivId = {1703.07834},
+author = {Jackson, Aaron S. and Bulat, Adrian and Argyriou, Vasileios and Tzimiropoulos, Georgios},
+eprint = {1703.07834},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Jackson et al. - 2017 - Large Pose 3D Face Reconstruction from a Single Image via Direct Volumetric CNN Regression.pdf:pdf},
+journal = {International Conference on Computer Vision (ICCV)},
+title = {{Large Pose 3D Face Reconstruction from a Single Image via Direct Volumetric CNN Regression}},
+year = {2017}
+}
+@article{Kim2017,
+abstract = {We introduce InverseFaceNet, a deep convolutional inverse rendering framework for faces that jointly estimates facial pose, shape, expression, reflectance and illumination from a single input image in a single shot. By estimating all these parameters from just a single image, advanced editing possibilities on a single face image, such as appearance editing and relighting, become feasible. Previous learning-based face reconstruction approaches do not jointly recover all dimensions, or are severely limited in terms of visual quality. In contrast, we propose to recover high-quality facial pose, shape, expression, reflectance and illumination using a deep neural network that is trained using a large, synthetically created dataset. Our approach builds on a novel loss function that measures model-space similarity directly in parameter space and significantly improves reconstruction accuracy. In addition, we propose an analysis-by-synthesis breeding approach which iteratively updates the synthetic training corpus based on the distribution of real-world images, and we demonstrate that this strategy outperforms completely synthetically trained networks. Finally, we show high-quality reconstructions and compare our approach to several state-of-the-art approaches.},
+archivePrefix = {arXiv},
+arxivId = {1703.10956},
+author = {Kim, Hyeongwoo and Zollh{\"{o}}fer, Michael and Tewari, Ayush and Thies, Justus and Richardt, Christian and Theobalt, Christian},
+eprint = {1703.10956},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Kim et al. - 2017 - InverseFaceNet Deep Single-Shot Inverse Face Rendering From A Single Image.pdf:pdf},
+journal = {arXiv},
+title = {{InverseFaceNet: Deep Single-Shot Inverse Face Rendering From A Single Image}},
+year = {2017}
+}
+@article{Kingma2015,
+abstract = {We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions. The method is straightforward to implement and is based on adaptive estimates of lower-order moments of the gradients. The method is computationally efficient, has little memory requirements and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The method exhibits invariance to diagonal rescaling of the gradients by adapting to the geometry of the objective function. The hyper-parameters have intuitive interpretations and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework. We demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods.},
+archivePrefix = {arXiv},
+arxivId = {1412.6980},
+author = {Kingma, Diederik P. and Ba, Jimmy Lei},
+eprint = {1412.6980},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Kingma, Ba - 2015 - Adam a Method for Stochastic Optimization.pdf:pdf},
+journal = {International Conference on Learning Representations},
+pages = {1--15},
+title = {{Adam: a Method for Stochastic Optimization}},
+year = {2015}
+}
+@article{Klaudiny2017,
+author = {Klaudiny, Martin and McDonagh, Steven and Bradley, Derek and Beeler, Thabo and Mitchell, Kenny},
+doi = {10.1111/cgf.13129},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Klaudiny et al. - 2017 - Real-Time Multi-View Facial Capture with Synthetic Training.pdf:pdf},
+journal = {Computer Graphics Forum},
+number = {2},
+pages = {325--336},
+title = {{Real-Time Multi-View Facial Capture with Synthetic Training}},
+volume = {36},
+year = {2017}
+}
+@article{Korshunova2016,
+abstract = {We consider the problem of face swapping in images, where an input identity is transformed into a target identity while preserving pose, facial expression, and lighting. To perform this mapping, we use convolutional neural networks trained to capture the appearance of the target identity from an unstructured collection of his/her photographs.This approach is enabled by framing the face swapping problem in terms of style transfer, where the goal is to render an image in the style of another one. Building on recent advances in this area, we devise a new loss function that enables the network to produce highly photorealistic results. By combining neural networks with simple pre- and post-processing steps, we aim at making face swap work in real-time with no input from the user.},
+archivePrefix = {arXiv},
+arxivId = {1611.09577},
+author = {Korshunova, Iryna and Shi, Wenzhe and Dambre, Joni and Theis, Lucas},
+eprint = {1611.09577},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Korshunova et al. - 2016 - Fast Face-swap Using Convolutional Neural Networks.pdf:pdf},
+journal = {arXiv},
+title = {{Fast Face-swap Using Convolutional Neural Networks}},
+year = {2016}
+}
+@article{Krizhevsky2012,
+abstract = {We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5{\%} and 17.0 {\%} which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of the convolution operation. To reduce overfitting in the fully-connected layers we employed a recently-developed regularization method called “dropout” that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved a winning top-5 test error rate of 15.3{\%}, compared to 26.2 {\%} achieved by the second-best entry. 1},
+author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E.},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Krizhevsky, Sutskever, Hinton - Unknown - ImageNet Classification with Deep Convolutional Neural Networks.pdf:pdf},
+journal = {Advances in Neural Information Processing Systems 25},
+pages = {1097--1105},
+title = {{ImageNet classification with deep convolutional neural networks}},
+year = {2012}
+}
+@article{LeCun1989,
+abstract = {The ability of learning networks to generalize can be greatly enhanced by providing constraints from the task domain. This paper demonstrates how such constraints can be integrated into a backpropagation network through the architecture of the network. This approach has been successfully applied to the recognition of handwritten zip code digits provided by the US Postal Service. A single network learns the entire recognition operation, going from the normalized image of the character to the final classification.},
+author = {LeCun, Y. and Boser, B. and Denker, J. S. and Henderson, D. and Howard, R. E. and Hubbard, W. and Jackel, L. D.},
+doi = {10.1162/neco.1989.1.4.541},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Unknown - Unknown - full-text(3).pdf:pdf},
+journal = {Neural Computation},
+number = {4},
+pages = {541--551},
+title = {{Backpropagation Applied to Handwritten Zip Code Recognition}},
+volume = {1},
+year = {1989}
+}
+@article{LeCun2015,
+abstract = {Deep learning allows computational models that are composed of multiple processing layers to learn representations of data with multiple levels of abstraction. These methods have dramatically improved the state-of-the-art in speech recognition, visual object recognition, object detection and many other domains such as drug discovery and genomics. Deep learning discovers intricate structure in large data sets by using the backpropagation algorithm to indicate how a machine should change its internal parameters that are used to compute the representation in each layer from the representation in the previous layer. Deep convolutional nets have brought about breakthroughs in processing images, video, speech and audio, whereas recurrent nets have shone light on sequential data such as text and speech.},
+author = {LeCun, Yann and Bengio, Yoshua and Hinton, Geoffrey},
+doi = {10.1038/nature14539},
+journal = {Nature},
+number = {7553},
+pages = {436--444},
+title = {{Deep learning}},
+volume = {521},
+year = {2015}
+}
+@article{Lecun1998,
+abstract = {Multilayer neural networks trained with the back-propagation$\backslash$nalgorithm constitute the best example of a successful gradient based$\backslash$nlearning technique. Given an appropriate network architecture,$\backslash$ngradient-based learning algorithms can be used to synthesize a complex$\backslash$ndecision surface that can classify high-dimensional patterns, such as$\backslash$nhandwritten characters, with minimal preprocessing. This paper reviews$\backslash$nvarious methods applied to handwritten character recognition and$\backslash$ncompares them on a standard handwritten digit recognition task.$\backslash$nConvolutional neural networks, which are specifically designed to deal$\backslash$nwith the variability of 2D shapes, are shown to outperform all other$\backslash$ntechniques. Real-life document recognition systems are composed of$\backslash$nmultiple modules including field extraction, segmentation recognition,$\backslash$nand language modeling. A new learning paradigm, called graph transformer$\backslash$nnetworks (GTN), allows such multimodule systems to be trained globally$\backslash$nusing gradient-based methods so as to minimize an overall performance$\backslash$nmeasure. Two systems for online handwriting recognition are described.$\backslash$nExperiments demonstrate the advantage of global training, and the$\backslash$nflexibility of graph transformer networks. A graph transformer network$\backslash$nfor reading a bank cheque is also described. It uses convolutional$\backslash$nneural network character recognizers combined with global training$\backslash$ntechniques to provide record accuracy on business and personal cheques.$\backslash$nIt is deployed commercially and reads several million cheques per day$\backslash$n},
+author = {LeCun, Yann and Bottou, L{\'{e}}on and Bengio, Yoshua and Haffner, Patrick},
+doi = {10.1109/5.726791},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/LeCun et al. - 1998 - Gradient-based learning applied to document recognition.pdf:pdf},
+journal = {Proceedings of the IEEE},
+number = {11},
+pages = {2278--2323},
+title = {{Gradient-based learning applied to document recognition}},
+volume = {86},
+year = {1998}
+}
+@inproceedings{liu2015faceattributes,
+author = {Liu, Ziwei and Luo, Ping and Wang, Xiaogang and Tang, Xiaoou},
+booktitle = {Proceedings of International Conference on Computer Vision (ICCV)},
+doi = {10.1109/ICCV.2015.425},
+pages = {3730--3738},
+title = {{Deep Learning Face Attributes in the Wild}},
+year = {2015}
+}
+@inproceedings{Long2015,
+abstract = {Convolutional networks are powerful visual models that yield hierarchies of features. We show that convolutional networks by themselves, trained end-to-end, pixels-to-pixels, exceed the state-of-the-art in semantic segmentation. Our key insight is to build "fully convolutional" networks that take input of arbitrary size and produce correspondingly-sized output with efficient inference and learning. We define and detail the space of fully convolutional networks, explain their application to spatially dense prediction tasks, and draw connections to prior models. We adapt contemporary classification networks (AlexNet, the VGG net, and GoogLeNet) into fully convolutional networks and transfer their learned representations by fine-tuning to the segmentation task. We then define a novel architecture that combines semantic information from a deep, coarse layer with appearance information from a shallow, fine layer to produce accurate and detailed segmentations. Our fully convolutional network achieves state-of-the-art segmentation of PASCAL VOC (20{\%} relative improvement to 62.2{\%} mean IU on 2012), NYUDv2, and SIFT Flow, while inference takes one third of a second for a typical image.},
+author = {Long, Jonathan and Shelhamer, Evan and Darrell, Trevor},
+booktitle = {Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
+doi = {10.1109/CVPR.2015.7298965},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Long, Shelhamer, Darrell - Unknown - Fully Convolutional Networks for Semantic Segmentation.pdf:pdf},
+pages = {3431--3440},
+title = {{Fully convolutional networks for semantic segmentation}},
+year = {2015}
+}
+@inproceedings{Movshovitz-Attias2016,
+abstract = {Data seems cheap to get, and in many ways it is, but the process of creating a high quality labeled dataset from a mass of data is time-consuming and expensive. With the advent of rich 3D repositories, photo-realistic rendering systems offer the opportunity to provide nearly limitless data. Yet, their primary value for visual learning may be the quality of the data they can provide rather than the quantity. Rendering engines offer the promise of perfect labels in addition to the data: what the precise camera pose is; what the precise lighting location, temperature, and distribution is; what the geometry of the object is. In this work we focus on semi-automating dataset creation through use of synthetic data and apply this method to an important task -- object viewpoint estimation. Using state-of-the-art rendering software we generate a large labeled dataset of cars rendered densely in viewpoint space. We investigate the effect of rendering parameters on estimation performance and show realism is important. We show that generalizing from synthetic data is not harder than the domain adaptation required between two real-image datasets and that combining synthetic images with a small amount of real data improves estimation accuracy.},
+archivePrefix = {arXiv},
+arxivId = {1603.08152},
+author = {Movshovitz-Attias, Yair and Kanade, Takeo and Sheikh, Yaser},
+booktitle = {Lecture Notes in Computer Science},
+eprint = {1603.08152},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Movshovitz-Attias, Kanade, Sheikh - 2016 - How useful is photo-realistic rendering for visual learning.pdf:pdf},
+pages = {202--217},
+title = {{How useful is photo-realistic rendering for visual learning?}},
+year = {2016}
+}
+@article{Nair2010,
+archivePrefix = {arXiv},
+arxivId = {1111.6189},
+author = {Nair, Vinod and Hinton, Geoffrey E},
+doi = {10.1.1.165.6419},
+eprint = {1111.6189},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Nair, Hinton - Unknown - Rectified Linear Units Improve Restricted Boltzmann Machines.pdf:pdf},
+journal = {Proceedings of the 27th International Conference on Machine Learning},
+number = {3},
+pages = {807--814},
+title = {{Rectified Linear Units Improve Restricted Boltzmann Machines}},
+year = {2010}
+}
+@article{Orhan2017,
+abstract = {Skip connections made the training of very deep networks possible and have become an indispensable component in a variety of neural architectures. A completely satisfactory explanation for their success remains elusive. Here, we present a novel explanation for the benefits of skip connections in training very deep networks. The difficulty of training deep networks is partly due to the singularities caused by the non-identifiability of the model. Two such singularities have been identified in previous work: (i) overlap singularities caused by the permutation symmetry of nodes in a given layer and (ii) elimination singularities corresponding to the elimination, i.e. consistent deactivation, of nodes. These singularities cause degenerate manifolds in the loss landscape previously shown to slow down learning. We argue that skip connections eliminate these singularities by breaking the permutation symmetry of nodes and by reducing the possibility of node elimination. Moreover, for typical initializations, skip connections move the network away from the "ghosts" of these singularities and sculpt the landscape around them to alleviate the learning slow-down. These hypotheses are supported by evidence from simplified models, as well as from experiments with fully-connected deep networks trained on CIFAR-10 and CIFAR-100.},
+archivePrefix = {arXiv},
+arxivId = {1701.09175},
+author = {Orhan, A. Emin and Pitkow, Xaq},
+eprint = {1701.09175},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Orhan, Pitkow - 2017 - Skip Connections Eliminate Singularities.pdf:pdf},
+journal = {arXiv},
+title = {{Skip Connections Eliminate Singularities}},
+year = {2017}
+}
+@article{Osadchy2007,
+abstract = {We describe a novel method for simultaneously detecting faces and estimating their pose in real time. The method employs a convolutional network to map images of faces to points on a low-dimensional manifold parametrized by pose, and images of non-faces to points far away from that manifold. Given an image, detecting a face and estimating its pose is viewed as minimizing an en-ergy function with respect to the face/non-face binary variable and the continuous pose parameters. The system is trained to minimize a loss function that drives correct combinations of labels and pose to be associated with lower energy values than incorrect ones. The system is designed to handle very large range of poses without retraining. The performance of the system was tested on three standard data sets—for frontal views, rotated faces, and profiles— is comparable to previous systems that are designed to handle a single one of these data sets. We show that a system trained simuiltaneously for detection and pose estimation is more accu-rate on both tasks than similar systems trained for each task separately. 1},
+author = {Osadchy, Margarita and {Le Cun}, Yann and Miller, Matthew L},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Osadchy RITA, Le Cun, Miller - 2007 - Synergistic Face Detection and Pose Estimation with Energy-Based Models.pdf:pdf},
+journal = {Journal of Machine Learning Research},
+pages = {1197--1215},
+title = {{Synergistic Face Detection and Pose Estimation with Energy-Based Models}},
+volume = {8},
+year = {2007}
+}
+@inproceedings{Perlin2002,
+abstract = {Two deficiencies in the original Noise algorithm are corrected: second order interpolation discontinuity and unoptimal gradient computation. With these defects corrected, Noise both looks better and runs faster. The latter change also makes it easier to define a uniform mathematical reference standard.},
+author = {Perlin, Ken},
+booktitle = {Proceedings of the 29th annual conference on Computer graphics and interactive techniques},
+doi = {10.1145/566570.566636},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Perlin - Unknown - Improving Noise.pdf:pdf},
+pages = {681--682},
+title = {{Improving noise}},
+year = {2002}
+}
+@article{Richardson2016a,
+abstract = {Fast and robust three-dimensional reconstruction of fa-cial geometric structure from a single image is a chal-lenging task with numerous applications. Here, we intro-duce a learning-based approach for reconstructing a three-dimensional face from a single image. Recent face recovery methods rely on accurate localization of key characteris-tic points. In contrast, the proposed approach is based on a Convolutional-Neural-Network (CNN) which extracts the face geometry directly from its image. Although such deep architectures outperform other models in complex com-puter vision problems, training them properly requires a large dataset of annotated examples. In the case of three-dimensional faces, currently, there are no large volume data sets, while acquiring such big-data is a tedious task. As an alternative, we propose to generate random, yet nearly photo-realistic, facial images for which the geometric form is known. The suggested model successfully recovers fa-cial shapes from real images, even for faces with extreme expressions and under various lighting conditions.},
+author = {Richardson, Elad and Sela, Matan and Kimmel, Ron},
+doi = {10.1109/3DV.2016.56},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Richardson, Sela, Kimmel - 2016 - 3D Face Reconstruction by Learning from Synthetic Data.pdf:pdf},
+journal = {3Dv},
+pages = {461--468},
+title = {{3D Face Reconstruction by Learning from Synthetic Data}},
+year = {2016}
+}
+@article{Richardson2016,
+abstract = {Reconstructing the detailed geometric structure of a face from a given image is a key to many computer vision and graphics applications, such as motion capture and reenactment. The reconstruction task is challenging as human faces vary extensively when considering expressions, poses, textures, and intrinsic geometries. While many approaches tackle this complexity by using additional data to reconstruct the face of a single subject, extracting facial surface from a single image remains a difficult problem. As a result, single-image based methods can usually provide only a rough estimate of the facial geometry. In contrast, we propose to leverage the power of convolutional neural networks to produce a highly detailed face reconstruction from a single image. For this purpose, we introduce an end-to-end CNN framework which derives the shape in a coarse-to-fine fashion. The proposed architecture is composed of two main blocks, a network that recovers the coarse facial geometry (CoarseNet), followed by a CNN that refines the facial features of that geometry (FineNet). The proposed networks are connected by a novel layer which renders a depth image given a mesh in 3D. Unlike object recognition and detection problems, there are no suitable datasets for training CNNs to perform face geometry reconstruction. Therefore, our training regime begins with a supervised phase, based on synthetic images, followed by an unsupervised phase that uses only unconstrained facial images. The accuracy and robustness of the proposed model is demonstrated by both qualitative and quantitative evaluation tests.},
+author = {Richardson, Elad and Sela, Matan and Or-El, Roy and Kimmel, Ron},
+doi = {10.1109/CVPR.2017.589},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Richardson et al. - 2016 - Learning Detailed Face Reconstruction from a Single Image.pdf:pdf},
+journal = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+title = {{Learning Detailed Face Reconstruction from a Single Image}},
+year = {2017}
+}
+@article{Ronneberger2015,
+abstract = {There is large consent that successful training of deep networks requires many thousand annotated training samples. In this paper, we present a network and training strategy that relies on the strong use of data augmentation to use the available annotated samples more efficiently. The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization. We show that such a network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks. Using the same network trained on transmitted light microscopy images (phase contrast and DIC) we won the ISBI cell tracking challenge 2015 in these categories by a large margin. Moreover, the network is fast. Segmentation of a 512x512 image takes less than a second on a recent GPU. The full implementation (based on Caffe) and the trained networks are available at http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net .},
+author = {Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+doi = {10.1007/978-3-319-24574-4_28},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Ronneberger, Fischer, Brox - 2015 - U-Net Convolutional Networks for Biomedical Image Segmentation.pdf:pdf},
+journal = {Miccai},
+pages = {234--241},
+title = {{U-Net: Convolutional Networks for Biomedical Image Segmentation}},
+year = {2015}
+}
+@inproceedings{Saito2016,
+abstract = {We introduce the concept of unconstrained real-time 3D facial performance capture through explicit semantic segmentation in the RGB input. To ensure robustness, cutting edge supervised learning approaches rely on large training datasets of face images captured in the wild. While impressive tracking quality has been demonstrated for faces that are largely visible, any occlusion due to hair, accessories, or hand-to-face gestures would result in significant visual artifacts and loss of tracking accuracy. The modeling of occlusions has been mostly avoided due to its immense space of appearance variability. To address this curse of high dimensionality, we perform tracking in unconstrained images assuming non-face regions can be fully masked out. Along with recent breakthroughs in deep learning, we demonstrate that pixel-level facial segmentation is possible in real-time by repurposing convolutional neural networks designed originally for general semantic segmentation. We develop an efficient architecture based on a two-stream deconvolution network with complementary characteristics, and introduce carefully designed training samples and data augmentation strategies for improved segmentation accuracy and robustness. We adopt a state-of-the-art regression-based facial tracking framework with segmented face images as training, and demonstrate accurate and uninterrupted facial performance capture in the presence of extreme occlusion and even side views. Furthermore, the resulting segmentation can be directly used to composite partial 3D face models on the input images and enable seamless facial manipulation tasks, such as virtual make-up or face replacement.},
+archivePrefix = {arXiv},
+arxivId = {1604.02647},
+author = {Saito, Shunsuke and Li, Tianye and Li, Hao},
+booktitle = {Lecture Notes in Computer Science},
+doi = {10.1007/978-3-319-46484-8_15},
+eprint = {1604.02647},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Saito, Li, Li - 2016 - Real-Time Facial Segmentation and Performance Capture from RGB Input.pdf:pdf},
+pages = {244--261},
+title = {{Real-time facial segmentation and performance capture from RGB input}},
+volume = {9912},
+year = {2016}
+}
+@conference{Sakai1972,
+author = {Sakai, Toshiyuki and Makoto, Nagao and Takeo, Kanade},
+booktitle = {First USA—Japan Computer Conference},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Toshiyuki, Nagao, Kanade - 1972 - Computer analysis and classiﬁcation of photographs of human faces.pdf:pdf},
+pages = {55--62},
+title = {{Computer analysis and classification of photographs of human faces}},
+year = {1972}
+}
+@inproceedings{1-bit-sgd,
+abstract = {We show empirically that in SGD training of deep neural networks, one can, at no or nearly no loss of accuracy, quantize the gradients aggressively—to but one bit per value—if the quantization error is carried forward across minibatches (error feedback). This size reduction makes it feasible to parallelize SGD through data-parallelism with fast processors like recent GPUs. We implement data-parallel deterministically distributed SGD by combining this finding with AdaGrad, automatic minibatch-size selection, double buffering, and model parallelism. Unexpectedly, quantization benefits AdaGrad, giving a small accuracy gain. For a typical Switchboard DNN with 46M parameters, we reach computation speeds of 27k frames per second (kfps) when using 2880 samples per minibatch, and 51kfps with 16k, on a server with 8 K20X GPUs. This corresponds to speed-ups over a single GPU of 3.6 and 6.3, respectively. 7 training passes over 309h of data complete in under 7h. A 160M-parameter model training processes 3300h of data in under 16h on 20 dual-GPU servers—a 10 times speed-up—albeit at a small accuracy loss.},
+author = {Seide, Frank and Fu, Hao and Droppo, Jasha and Li, Gang and Yu, Dong},
+booktitle = {Interspeech 2014},
+title = {{1-Bit Stochastic Gradient Descent and Application to Data-Parallel Distributed Training of Speech DNNs}},
+year = {2014}
+}
+@article{Sela2017,
+abstract = {It has been recently shown that neural networks can recover the geometric structure of a face from a single given image. A common denominator of most existing face geometry reconstruction methods is the restriction of the solution space to some low-dimensional subspace. While such a model significantly simplifies the reconstruction problem, it is inherently limited in its expressiveness. As an alternative, we propose an Image-to-Image translation network that maps the input image to a depth image and a facial correspondence map. This explicit pixel-based mapping can then be utilized to provide high quality reconstructions of diverse faces under extreme expressions. In the spirit of recent approaches, the network is trained only with synthetic data, and is then evaluated on "in-the-wild" facial images. Both qualitative and quantitative analyses demonstrate the accuracy and the robustness of our approach. As an additional analysis of the proposed network, we show that it can be used as a geometric constraint for facial image translation tasks.},
+archivePrefix = {arXiv},
+arxivId = {1703.10131},
+author = {Sela, Matan and Richardson, Elad and Kimmel, Ron},
+eprint = {1703.10131},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Sela, Richardson, Kimmel - Unknown - Unrestricted Facial Geometry Reconstruction Using Image-to-Image Translation.pdf:pdf},
+journal = {International Conference on Computer Vision (ICCV)},
+title = {{Unrestricted Facial Geometry Reconstruction Using Image-to-Image Translation}},
+year = {2017}
+}
+@article{Simonyan2015,
+abstract = {In this work we investigate the effect of the convolutional network depth on its accuracy in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3x3) convolution filters, which shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers. These findings were the basis of our ImageNet Challenge 2014 submission, where our team secured the first and the second places in the localisation and classification tracks respectively. We also show that our representations generalise well to other datasets, where they achieve state-of-the-art results. We have made our two best-performing ConvNet models publicly available to facilitate further research on the use of deep visual representations in computer vision.},
+archivePrefix = {arXiv},
+arxivId = {1409.1556},
+author = {Simonyan, Karen and Zisserman, Andrew},
+doi = {10.1016/j.infsof.2008.09.005},
+eprint = {1409.1556},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Simonyan, Zisserman - 2014 - Very Deep Convolutional Networks for Large-Scale Image Recognition.pdf:pdf},
+journal = {International Conference on Learning Representations (ICRL)},
+pages = {1--14},
+title = {{Very Deep Convolutional Networks for Large-Scale Image Recognition}},
+year = {2015}
+}
+@article{Sirovich1987,
+abstract = {A method is presented for the representation of (pictures of) faces. Within a specified framework the representation is ideal. This results in the characterization of a face, to within an error bound, by a relatively low-dimensional vector. The method is illustrated in detail by the use of an ensemble of pictures taken for this purpose.},
+author = {Sirovich, L. and Kirby, M.},
+doi = {10.1364/JOSAA.4.000519},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Sirovich, Kirby - 1987 - Low-dimensional procedure for the characterization of human faces.pdf:pdf},
+journal = {Journal of the Optical Society of America A},
+number = {3},
+pages = {519},
+title = {{Low-dimensional procedure for the characterization of human faces}},
+volume = {4},
+year = {1987}
+}
+@article{Springen2014,
+abstract = {Most modern convolutional neural networks (CNNs) used for object recognition are built using the same principles: Alternating convolution and max-pooling layers followed by a small number of fully connected layers. We re-evaluate the state of the art for object recognition from small images with convolutional networks, questioning the necessity of different components in the pipeline. We find that max-pooling can simply be replaced by a convolutional layer with increased stride without loss in accuracy on several image recognition benchmarks. Following this finding -- and building on other recent work for finding simple network structures -- we propose a new architecture that consists solely of convolutional layers and yields competitive or state of the art performance on several object recognition datasets (CIFAR-10, CIFAR-100, ImageNet). To analyze the network we introduce a new variant of the "deconvolution approach" for visualizing features learned by CNNs, which can be applied to a broader range of network structures than existing approaches.},
+archivePrefix = {arXiv},
+arxivId = {1412.6806},
+author = {Springenberg, Jost Tobias and Dosovitskiy, Alexey and Brox, Thomas and Riedmiller, Martin},
+eprint = {1412.6806},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Springenberg et al. - 2014 - Striving for Simplicity The All Convolutional Net.pdf:pdf},
+journal = {arXiv},
+title = {{Striving for Simplicity: The All Convolutional Net}},
+year = {2014}
+}
+@article{Tewari2017,
+abstract = {In this work we propose a novel model-based deep convolutional autoencoder that addresses the highly challenging problem of reconstructing a 3D human face from a single in-the-wild color image. To this end, we combine a convolutional encoder network with an expert-designed generative model that serves as decoder. The core innovation is our new differentiable parametric decoder that encapsulates image formation analytically based on a generative model. Our decoder takes as input a code vector with exactly defined semantic meaning that encodes detailed face pose, shape, expression, skin reflectance and scene illumination. Due to this new way of combining CNN-based with model-based face reconstruction, the CNN-based encoder learns to extract semantically meaningful parameters from a single monocular input image. For the first time, a CNN encoder and an expert-designed generative model can be trained end-to-end in an unsupervised manner, which renders training on very large (unlabeled) real world data feasible. The obtained reconstructions compare favorably to current state-of-the-art approaches in terms of quality and richness of representation.},
+archivePrefix = {arXiv},
+arxivId = {1703.10580},
+author = {Tewari, Ayush and Zollh{\"{o}}fer, Michael and Kim, Hyeongwoo and Garrido, Pablo and Bernard, Florian and P{\'{e}}rez, Patrick and Theobalt, Christian},
+eprint = {1703.10580},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Tewari et al. - 2017 - MoFA Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction.pdf:pdf},
+journal = {The IEEE International Conference on Computer Vision (ICCV)},
+title = {{MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction}},
+year = {2017}
+}
+@article{Tobin2017,
+abstract = {Bridging the 'reality gap' that separates simulated robotics from experiments on hardware could accelerate robotic research through improved data availability. This paper explores domain randomization, a simple technique for training models on simulated images that transfer to real images by randomizing rendering in the simulator. With enough variability in the simulator, the real world may appear to the model as just another variation. We focus on the task of object localization, which is a stepping stone to general robotic manipulation skills. We find that it is possible to train a real-world object detector that is accurate to {\$}1.5{\$}cm and robust to distractors and partial occlusions using only data from a simulator with non-realistic random textures. To demonstrate the capabilities of our detectors, we show they can be used to perform grasping in a cluttered environment. To our knowledge, this is the first successful transfer of a deep neural network trained only on simulated RGB images (without pre-training on real images) to the real world for the purpose of robotic control.},
+archivePrefix = {arXiv},
+arxivId = {1703.06907},
+author = {Tobin, Josh and Fong, Rachel and Ray, Alex and Schneider, Jonas and Zaremba, Wojciech and Abbeel, Pieter},
+eprint = {1703.06907},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Tobin et al. - 2017 - Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World.pdf:pdf},
+journal = {arXiv},
+title = {{Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World}},
+year = {2017}
+}
+@article{Turk1991,
+abstract = {An approach to the detection and identification of human faces is presented, and a working, near-real-time face recognition system which tracks a subject's head and then recognizes the person by comparing characteristics of the face to those of known individuals is described. This approach treats face recognition as a two-dimensional recognition problem, taking advantage of the fact that faces are normally upright and thus may be described by a small set of 2-D characteristic views. Face images are projected onto a feature space (`face space') that best encodes the variation among known face images. The face space is defined by the `eigenfaces', which are the eigenvectors of the set of faces; they do not necessarily correspond to isolated features such as eyes, ears, and noses. The framework provides the ability to learn to recognize new faces in an unsupervised manner},
+author = {Turk, Matthew A. and Pentland, Alex P.},
+doi = {10.1109/CVPR.1991.139758},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Unknown - Unknown - full-text.pdf:pdf},
+journal = {1991 IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
+number = {1},
+pages = {586--591},
+title = {{Face recognition using eigenfaces}},
+volume = {3},
+year = {1991}
+}
+@article{Valgaerts2012,
+abstract = {Recent progress in passive facial performance capture has shown impressively detailed results on highly articulated motion. However, most methods rely on complex multi-camera set-ups, controlled lighting or fiducial markers. This prevents them from being used in general environments, outdoor scenes, during live action on a film set, or by freelance animators and everyday users who want to capture their digital selves. In this paper, we therefore propose a lightweight passive facial performance capture approach that is able to reconstruct high-quality dynamic facial geometry from only a single pair of stereo cameras. Our method succeeds under uncontrolled and time-varying lighting, and also in outdoor scenes. Our approach builds upon and extends recent image-based scene flow computation, lighting estimation and shading-based refinement algorithms. It integrates them into a pipeline that is specifically tailored towards facial performance reconstruction from challenging binocular footage under uncontrolled lighting. In an experimental evaluation, the strong capabilities of our method become explicit: We achieve detailed and spatio-temporally coherent results for expressive facial motion in both indoor and outdoor scenes -- even from low quality input images recorded with a hand-held consumer stereo camera. We believe that our approach is the first to capture facial performances of such high quality from a single stereo rig and we demonstrate that it brings facial performance capture out of the studio, into the wild, and within the reach of everybody.},
+author = {Valgaerts, Levi and Wu, Chenglei and Seidel, Hans-Peter and Bruhn, Andr{\'{e}}s and Theobalt, Christian},
+doi = {10.1145/2366145.2366206},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Valgaerts et al. - Unknown - Lightweight Binocular Facial Performance Capture under Uncontrolled Lighting.pdf:pdf},
+journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia)},
+pages = {187:1----187:11},
+title = {{Lightweight Binocular Facial Performance Capture under Uncontrolled Lighting}},
+volume = {31},
+year = {2012}
+}
+@article{Schaaf1996,
+abstract = {Power spectra of an extensive set of natural images were analysed. Both the total power in a spectrum (corresponding to image contrast) and its dependence on spatial frequency vary considerably between images, and also within images when considered as functions of orientation. A series of probabilistic models for power spectra enabled calculating the information obtained from prior knowledge of parameters describing spectra. Most information is gained from contrast, 1/f2 spatial frequency behaviour, and contrast as a function of orientation. Variations in spatial frequency behaviour are relatively unimportant. For oriented contrast, a bandwidth of 10-30 deg is sufficient to obtain most information.},
+author = {{Van der Schaaf}, A. and {Van Hateren}, J. H.},
+journal = {Vision Research},
+number = {17},
+pages = {2759--2770},
+publisher = {Pergamon},
+title = {{Modelling the power spectra of natural images: Statistics and information}},
+volume = {36},
+year = {1996}
+}
+@inproceedings{Viola2001,
+abstract = {This paper describes a machine learning approach for visual object detection which is capable of processing images extremely rapidly and achieving high detection rates. This work is distinguished by three key contributions. The first is the introduction of a new image representation called the "integral image" which allows the features used by our detector to be computed very quickly. The second is a learning algorithm, based on AdaBoost, which selects a small number of critical visual features from a larger set and yields extremely efficient classifiers. The third contribution is a method for combining increasingly more complex classifiers in a "cascade" which allows background regions of the image to be quickly discarded while spending more computation on promising object-like regions. The cascade can be viewed as an object specific focus-of-attention mechanism which unlike previous approaches provides statistical guarantees that discarded regions are unlikely to contain the object of interest. In the domain of face detection the system yields detection rates comparable to the best previous systems. Used in real-time applications, the detector runs at 15 frames per second without resorting to image differencing or skin color detection.},
+author = {Viola, Paul and Jones, Michael},
+booktitle = {Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
+doi = {10.1109/CVPR.2001.990517},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Viola, Jones - Unknown - Rapid Object Detection using a Boosted Cascade of Simple Features.pdf:pdf},
+pages = {511--518},
+title = {{Rapid object detection using a boosted cascade of simple features}},
+volume = {1},
+year = {2001}
+}
+@article{Wu2015,
+abstract = {We present a state-of-the-art image recognition system, Deep Image, developed using end-to-end deep learning. The key components are a custom-built supercomputer dedicated to deep learning, a highly optimized parallel algorithm using new strategies for data partitioning and communication, larger deep neural network models, novel data augmentation approaches, and usage of multi-scale high-resolution images. Our method achieves excellent results on multiple challenging computer vision benchmarks.},
+archivePrefix = {arXiv},
+arxivId = {1501.02876},
+author = {Wu, Ren and Yan, Shengen and Shan, Yi and Dang, Qingqing and Sun, Gang},
+eprint = {1501.02876},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Wu et al. - Unknown - Deep Image Scaling up Image Recognition.pdf:pdf},
+journal = {arXiv},
+title = {{Deep Image: Scaling up Image Recognition}},
+year = {2015}
+}
+@article{Yu2015,
+abstract = {State-of-the-art models for semantic segmentation are based on adaptations of convolutional networks that had originally been designed for image classification. However, dense prediction and image classification are structurally different. In this work, we develop a new convolutional network module that is specifically designed for dense prediction. The presented module uses dilated convolutions to systematically aggregate multi-scale contextual information without losing resolution. The architecture is based on the fact that dilated convolutions support exponential expansion of the receptive field without loss of resolution or coverage. We show that the presented context module increases the accuracy of state-of-the-art semantic segmentation systems. In addition, we examine the adaptation of image classification networks to dense prediction and show that simplifying the adapted network can increase accuracy.},
+archivePrefix = {arXiv},
+arxivId = {1511.07122},
+author = {Yu, Fisher and Koltun, Vladlen},
+eprint = {1511.07122},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Yu, Koltun - 2015 - Multi-Scale Context Aggregation by Dilated Convolutions.pdf:pdf},
+journal = {International Conference on Learning Representations (ICLR)},
+title = {{Multi-Scale Context Aggregation by Dilated Convolutions}},
+year = {2016}
+}
+@article{Yu2017,
+abstract = {We present a minimalistic but effective neural network that computes dense facial correspondences in highly unconstrained RGB images. Our network learns a per-pixel flow and a matchability mask between 2D input photographs of a person and the projection of a textured 3D face model. To train such a network, we generate a massive dataset of synthetic faces with dense labels using renderings of a morphable face model with variations in pose, expressions, lighting, and occlusions. We found that a training refinement using real photographs is required to drastically improve the ability to handle real images. When combined with a facial detection and 3D face fitting step, we show that our approach outperforms the state-of-the-art face alignment methods in terms of accuracy and speed. By directly estimating dense correspondences, we do not rely on the full visibility of sparse facial landmarks and are not limited to the model space of regression-based approaches. We also assess our method on video frames and demonstrate successful per-frame processing under extreme pose variations, occlusions, and lighting conditions. Compared to existing 3D facial tracking techniques, our fitting does not rely on previous frames or frontal facial initialization and is robust to imperfect face detections.},
+author = {Yu, Ronald and Saito, Shunsuke and Li, Haoxiang and Ceylan, Duygu and Li, Hao},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Yu et al. - 2017 - Learning Dense Facial Correspondences in Unconstrained Images.pdf:pdf},
+journal = {International Conference on Computer Vision (ICCV)},
+title = {{Learning Dense Facial Correspondences in Unconstrained Images}},
+year = {2017}
+}
+@inproceedings{Zeiler2010,
+abstract = {Building robust low and mid-level image representations, beyond edge primitives, is a long-standing goal in vision. Many existing feature detectors spatially pool edge information which destroys cues such as edge intersections, parallelism and symmetry. We present a learning framework where features that capture these mid-level cues spontaneously emerge from image data. Our approach is based on the convolutional decomposition of images under a spar-sity constraint and is totally unsupervised. By building a hierarchy of such decompositions we can learn rich feature sets that are a robust image representation for both the analysis and synthesis of images.},
+author = {Zeiler, Matthew D and Krishnan, Dilip and Taylor, Graham W and Fergus, Rob},
+booktitle = {Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
+doi = {10.1109/CVPR.2010.5539957},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Zeiler et al. - Unknown - Deconvolutional Networks.pdf:pdf},
+pages = {2528--2535},
+title = {{Deconvolutional networks}},
+year = {2010}
+}
+@article{Zhang2016,
+abstract = {Indoor scene understanding is central to applications such as robot navigation and human companion assistance. Over the last years, data-driven deep neural networks have outperformed many traditional approaches thanks to their representation learning capabilities. One of the bottlenecks in training for better representations is the amount of available per-pixel ground truth data that is required for core scene understanding tasks such as semantic segmentation, normal prediction, and object edge detection. To address this problem, a number of works proposed using synthetic data. However, a systematic study of how such synthetic data is generated is missing. In this work, we introduce a large-scale synthetic dataset with 400K physically-based rendered images from 45K realistic 3D indoor scenes. We study the effects of rendering methods and scene lighting on training for three computer vision tasks: surface normal prediction, semantic segmentation, and object boundary detection. This study provides insights into the best practices for training with synthetic data (more realistic rendering is worth it) and shows that pretraining with our new synthetic dataset can improve results beyond the current state of the art on all three tasks.},
+author = {Zhang, Yinda and Song, Shuran and Yumer, Ersin and Savva, Manolis and Lee, Joon-Young and Jin, Hailin and Funkhouser, Thomas},
+doi = {10.1109/CVPR.2017.537},
+file = {:C$\backslash$:/Users/mikor/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Zhang et al. - 2016 - Physically-Based Rendering for Indoor Scene Understanding Using Convolutional Neural Networks.pdf:pdf},
+journal = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+title = {{Physically-Based Rendering for Indoor Scene Understanding Using Convolutional Neural Networks}},
+year = {2017}
+}
+@misc{blender,
+title = {{Blender}},
+url = {https://www.blender.org/},
+urldate = {2017-10-10}
+}
+@misc{chainer,
+title = {{Chainer}},
+url = {https://chainer.org/},
+urldate = {2017-10-10}
+}
+@misc{cntk,
+title = {{Microsoft Cognitive Toolkit (CNTK)}},
+url = {https://www.microsoft.com/en-us/cognitive-toolkit/},
+urldate = {2017-10-10}
+}
+@misc{pytorch,
+title = {{PyTorch}},
+url = {http://pytorch.org/},
+urldate = {2017-10-10}
+}
+@misc{sibl,
+title = {{sIBL Archive}},
+url = {http://www.hdrlabs.com/sibl/archive.html},
+urldate = {2017-10-10}
+}
+@misc{tensorboard,
+title = {{Tensorboard}},
+url = {https://github.com/tensorflow/tensorboard},
+urldate = {2017-10-10}
+}
+@misc{tensorflow,
+title = {{Tensorflow}},
+url = {https://www.tensorflow.org/},
+urldate = {2017-10-10}
+}
+@misc{textures,
+title = {{Textures.com}},
+url = {https://www.textures.com/},
+urldate = {2017-10-10}
+}
+@misc{unity,
+title = {{Unity Game Engine}},
+url = {https://unity3d.com/},
+urldate = {2017-10-10}
+}
+@misc{unreal,
+title = {{Unreal Game Engine}},
+url = {https://www.unrealengine.com},
+urldate = {2017-10-10}
+}
+@misc{uvnet,
+title = {{UV-net test videos}},
+url = {http://bit.ly/uvnet},
+urldate = {2017-10-10}
+}

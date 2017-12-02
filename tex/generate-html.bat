@@ -1,0 +1,1 @@
+pandoc parts/5ourmethod.tex -f latex -t html -s -o 5ourmethod.html
